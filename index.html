@@ -1,1 +1,162 @@
-Test
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NoelPrint 1.2.1</title>
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="images/favicon.png" rel="shortcut icon">
+</head>
+<body data-offset="60" data-spy="scroll" data-target=".navbar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a class="brand" href="#description">NoelPrint 1.2.1</a></h1>
+                <div class="collapse nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#description">Description</a></li>
+                        <li><a href="#utilisation">Utilisation</a></li>
+                        <li><a href="#historique">Historique</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Téléchargement <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="downloads/NoelPrint 1.2.1.exe"><i class="icon-download"></i> Exécutable</a></li>
+                                <li><a href="downloads/NoelPrint 1.2.1.zip"><i class="icon-download"></i> Sources</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="description">
+            <div class="span12">
+                <h2>Description</h2>
+                <p>NoelPrint est une application Windows développée en C# permettant de prendre des screenshots et de les uploader automatiquement sur <a href="http://www.noelshack.com">NoelShack</a>, en copiant à la volée le lien généré dans le presse papier.</p>
+                <p>Il est possible de lancer automatiquement NoelPrint au démarrage de Windows, et une option additionnelle permet d'exporter l'historique des screenshots au format HTML.</p>
+                <h3>Bugs connus</h3>
+                <p>L'exécutable est compilé avec <a href="http://www.microsoft.com/fr-fr/download/details.aspx?id=30653">Microsoft .NET Framework 4.5</a>, si vous avez une version antérieure NoelPrint risque de se lancer et de crasher avec le message d'erreur suivant :
+                <pre>System.TypeLoadException: Impossible de charger le type 'System.Runtime.CompilerServices.ExtensionAttribute' à partir de l'assembly 'mscorlib'</pre>
+                <p>Veillez à installer <a href="http://www.microsoft.com/fr-fr/download/details.aspx?id=30653">Microsoft .NET Framework 4.5</a> pour que NoelPrint fonctionne correctement.</p>
+                <h3>Suggestions</h3>
+                <p>Voici la liste des suggestions de fonctionnalités pour NoelPrint, selon l'ordre dans lequel je compte les traiter.</p>
+                <ul>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-1-0-1-0-windows-noelprint.htm#message_1763605">Personnalisation des raccourcis clavier</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-8-0-1-0-windows-noelprint.htm#message_1771618">Possibilité de changer le nom dans l'URL</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-4-0-1-0-windows-noelprint.htm#message_1764060">Ne pas changer le nom dans l'URL</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-9-0-1-0-windows-noelprint.htm#message_1771645">Mises à jour automatiques</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-8-0-1-0-windows-noelprint.htm#message_1770313">Afficher les 5 derniers screenshots</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-6-0-1-0-windows-noelprint.htm#message_1767501">Sauvegarder les screenshots dans un dossier</a></li>
+                    <li><a href="http://www.jeuxvideo.com/forums/1-1000021-1763574-11-0-1-0-windows-noelprint.htm#message_1771967">Région préenregistrée</a></li>
+                </ul>
+                <div class="form-actions">
+                    <a class="btn btn-primary" href="http://www.jeuxvideo.com/forums/3-1000021-1763574-1-0-1-0-windows-noelprint.htm#form_post">Faire une suggestion</a>
+                    <a class="btn" href="http://www.jeuxvideo.com/forums/1-1000021-1763574-1-0-1-0-windows-noelprint.htm">Voir le topic officiel</a>
+                </div>
+            <div>
+        </div>
+        <hr>
+        <div class="row" id="utilisation">
+            <div class="span12">
+                <h2>Utilisation</h2>
+                <p>L'utilisation de NoelPrint se résume à trois raccourcis permettant respectivement de prendre une capture globale, une capture de la fenêtre active, ou de capturer une zone personnalisée sur l'écran.</p>
+                <dl class="dl-horizontal">
+                    <dt>Ctrl + 2 (é)</dt>
+                    <dd>Capture globale</dd>
+                    <dt>Ctrl + 3 (")</dt>
+                    <dd>Capture de la fenêtre active</dd>
+                    <dt>Ctrl + 4 (')</dt>
+                    <dd>Capture d'une zone personnalisée</dd>
+                </dl>
+                <p>Lors de l'activation d'une de ces fonctionnalitées, une bulle de notification sera affichée en bas à droite indiquant le succès de l'upload. Le lien de l'image uploadée sera alors automatiquement copié dans le presse papier, et un clic sur la bulle de notification l'ouvrira dans votre navigateur préféré !</p>
+                <p>NoelPrint ajoute également un icône dans la zone de notifications, qui propose les fonctionnalités précédentes lors d'un clic droit.</p>
+                <p>Le menu contextuel de l'icône NoelPrint permet également d'autres fonctionnalités.</p>
+                <dl class="dl-horizontal">
+                    <dt>Sauvegarder l'historique</dt>
+                    <dd>Sauvegarde l'historique des 32 derniers screenshots dans un fichier HTML</dd>
+                    <dt>Lancer au démarrage</dt>
+                    <dd>Permet de lancer ou non NoelPrint au démarrage de Windows via une case à cocher dans le menu contextuel</dd>
+                    <dt>Quitter</dt>
+                    <dd>Exécute les tâches définies par l'application associées à la libération ou à la redéfinition des ressources non managées</dd>
+                </dl>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="historique">
+            <div class="span12">
+                <h2>Historique</h2>
+                <div class="row">
+                    <div class="span6">
+                        <h3>NoelPrint 1.2.1 <small>18 mai 2013</small></h3>
+                        <p>Correction de quelques bugs liés à la montée en version.</p>
+                        <h4>Nouveautés</h4>
+                        <ul>
+                            <li>Suppression de l'ancien fichier d'historique si le format n'est pas compatible</li>
+                            <li>Correction d'un éventuel bug lié au curseur de la sélection personnalisée</li>
+                        </ul>
+                        <h4>Téléchargement</h4>
+                        <div class="form-actions">
+                            <a class="btn btn-large btn-primary" href="downloads/NoelPrint 1.2.1.exe">Exécutable</a>
+                            <a class="btn btn-large" href="downloads/NoelPrint 1.2.1.zip">Sources</a>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <h3>NoelPrint 1.2 <small>18 mai 2013</small></h3>
+                        <p>Cette nouvelle version gagne en stabilité tout en rajoutant des fonctionnalités.</p>
+                        <h4>Nouveautés</h4>
+                        <ul>
+                            <li>Correction des bugs de la version précédente</li>
+                            <li>Amélioration considérable du sélecteur de région personnalisée</li>
+                            <li>Ajout de l'historisation des screenshots et possibilité d'exporter l'historique en HTML</li>
+                            <li>Option pour lancer NoelPrint au démarrage de Windows</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <h3>NoelPrint 1.1 <small>12 mai 2013</small></h3>
+                        <p>La version 1.1 apporte de nombreuses retouches dans le code source pour le rendre plus évolutif, en revanche elle n'apporte que peu de modifications concernant l'interface.</p>
+                        <h4>Nouveautés</h4>
+                        <ul>
+                            <li>Simplification des raccourcis</li>
+                            <li>Amélioration du sélecteur de région personnalisée</li>
+                            <li>Notification sonore lors de l'upload</li>
+                            <li>Possibilité de lancer une capture depuis le menu contextuel de l'icône dans la zone de notifications</li>
+                        </ul>
+                        <h4>Bugs</h4>
+                        <ul>
+                            <li>La capture de la fenêtre active n'est pas fonctionnelle via le menu contextuel</li>
+                            <li>Lors d'une sélection de région personnalisée, si l'on effectue un clic sans avoir sélectionné de zone, une exception est lancée.</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <h3>NoelPrint 1.0 <small>12 mai 2013</small></h3>
+                        <p>Première version publique de NoelPrint, elle permet déjà les fonctionnalités de base comme la capture globale, de la fenêtre active ou sélection personnalisée.</p>
+                        <h4>Bugs</h4>
+                        <ul>
+                            <li>Raccourcis non fonctionnels pour certains utilisateurs</li>
+                            <li>Impossibilité de lancer le logiciel pour certains utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class="row">
+            <div class="span12">
+                <p>© 2013 NoelPrint</p>
+            </div>
+        </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
